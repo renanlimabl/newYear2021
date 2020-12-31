@@ -7,6 +7,7 @@
 
 body {
   background: linear-gradient(135deg, #111, #222, #111);
+  overflow: hidden;
 }
 
 section {
