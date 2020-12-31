@@ -25,7 +25,7 @@ const timer = setInterval(() => {
   let formatMinutes = minutes < 10 ? '0' : ''
   let formatSeconds = seconds < 10 ? '0' : ''
   timerContainer.innerHTML = `${formatHours}${hours}:${formatMinutes}${minutes}:${formatSeconds}${seconds}`
-}, 1)
+}, 1000)
 
 let day = date.getFullYear();
 let month = date.getMonth();
