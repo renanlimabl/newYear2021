@@ -3,6 +3,10 @@ const date = new Date();
 let hours = date.getHours();
 let minutes = date.getMinutes();
 let seconds = date.getSeconds();
+let day = date.getDay();
+let month = date.getMonth();
+let year = date.getFullYear();
+
 
 const timerContainer = document.querySelector('.timer');
 const timer = setInterval(() => {
@@ -21,15 +25,17 @@ const timer = setInterval(() => {
     newYear();
   }
 
+  if (year === 2021) {
+    clearInterval(timer);
+    newYear();
+  }
+
   let formatHours = hours < 10 ? '0' : ''
   let formatMinutes = minutes < 10 ? '0' : ''
   let formatSeconds = seconds < 10 ? '0' : ''
   timerContainer.innerHTML = `${formatHours}${hours}:${formatMinutes}${minutes}:${formatSeconds}${seconds}`
 }, 1000)
 
-let day = date.getFullYear();
-let month = date.getMonth();
-let year = date.getDay();
 
 const body = document.querySelector('body')
 const content = document.querySelector('.content')
